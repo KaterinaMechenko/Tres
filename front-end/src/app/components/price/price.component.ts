@@ -1,5 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 
+export interface PriceList {
+  name: string;
+  units: number;
+  unitName: string;
+  price: number;
+}
+
+// mock data
+const PRICE_DATA: PriceList[] = [
+  { name: 'торт', units: 1, unitName: 'кг', price: 100},
+  { name: 'капкейки', units: 6, unitName: 'шт.', price: 100},
+  { name: 'капкейки', units: 9, unitName: 'шт.', price: 100},
+  { name: 'капкейки', units: 12, unitName: 'шт.', price: 100},
+  { name: 'Анна Павлова', units: 6, unitName: 'шт.', price: 100},
+  { name: 'Анна Павлова', units: 9, unitName: 'шт.', price: 100},
+  { name: 'Анна Павлова', units: 12, unitName: 'шт.', price: 100},
+  { name: 'трайфлы', units: 6, unitName: 'шт.', price: 100 },
+  { name: 'трайфлы', units: 9, unitName: 'шт.', price: 100 }
+];
+
 @Component({
   selector: 'app-price',
   templateUrl: './price.component.html',
@@ -9,40 +29,14 @@ export class PriceComponent implements OnInit {
 
   constructor() { }
 
+  displayedColumns: string[] = ['name', 'units', 'price'];
+  dataSource = PRICE_DATA;
+
   ngOnInit(): void {
   }
 
-}
-import {Component} from '@angular/core';
+  getCakeUnit(cake: PriceList): string {
+    return cake.units + ' ' + cake.unitName; // 1 кг
+  }
 
-export interface Price List {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
-
-const ELEMENT_DATA: Price List[] = [
-  { name: 'торт', weight: 1 кг, cost: '100'},
-  { name: 'капкейки', weight: 6 штук, cost: '100'},
-  { name: 'капкейки', weight: 9 штук, cost: '100'},
-  { name: 'капкейки', weight: 12 штук, cost: '100'},
-  { name: 'Анна Павлова', weight: 6 штук, cost: '100'},
-  { name: 'Анна Павлова', weight: 9 штук, cost: '100'},
-  { name: 'Анна Павлова', weight: 12 штук, symbol: '100'},
-  { name: 'трайфлы', weight: 6 штук, symbol: '100'},
-  { name: 'трайфлы', weight: 9 штук, symbol: '100'},
-];
-
-/**
- * @title Basic use of `<table mat-table>`
- */
-@Component({
-  selector: 'table-basic-example',
-  styleUrls: ['table-basic-example.css'],
-  templateUrl: 'table-basic-example.html',
-})
-export class TableBasicExample {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
 }

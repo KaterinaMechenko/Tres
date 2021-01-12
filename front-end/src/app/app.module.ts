@@ -8,6 +8,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import { HeaderComponent } from './components/header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { PriceComponent } from './components/price/price.component';
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { PriceComponent } from './components/price/price.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
