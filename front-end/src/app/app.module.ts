@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { PriceComponent } from './components/price/price.component';
 import {MatTableModule} from '@angular/material/table';
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {MatTableModule} from '@angular/material/table';
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatToolbarModule,
-    MatTableModule
+    MatTableModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

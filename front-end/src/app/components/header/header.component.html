@@ -1,7 +1,15 @@
 
 <mat-toolbar>
-
-    <span>très</span>
-    <span class="example-spacer"></span>
-
-  </mat-toolbar>
+    <div
+      class="header"
+      fxLayout="column"
+      fxLayoutAlign="center center"
+    >
+      <div class="header__title">
+        {{ content.title }}
+      </div>
+      <div class="header__subtitle">
+        {{ content.subtitle }}
+      </div>
+    </div>
+</mat-toolbar>
