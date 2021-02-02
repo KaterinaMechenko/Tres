@@ -22,5 +22,37 @@ mat-toolbar {
       font-size: 24px;
       letter-spacing: 1px;
     }
+
+    &__menu {
+      color: white;
+      font-size: 24px;
+      letter-spacing: 1px;
   }
+  .ul {
+    padding-left: 0;
+    list-style: none;
+    font-size:0;
+    height:50px; }
+}
+
+  .li { 
+    display: inline-block;
+    outline:1px solid #3C2C2C;
+    margin-right:5px;
+    height:100%;
+    width:50px; }
+
+    .card{
+      display: flex;
+    }
+    .header__menu{
+      width: 100px;
+      height: 50px;
+      border: 1px solid;
+      color: white;
+      font-size: 24px;
+      letter-spacing: 1px;
+      display: inline-block;
+      flex: auto;
+    }
 }
